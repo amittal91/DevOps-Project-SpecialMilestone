@@ -1,0 +1,13 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "sample app for milestone 3",
+  "main": "app.js",
+  "author": "karishma nimgaonkar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.3",
+    "redis": "^0.12.1",
+    "forever": "^0.15.1"
+  }
+}
