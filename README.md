@@ -12,3 +12,5 @@ naked
 mailutils
 stress
 
+/etc/init/
+/var/spool/cron/crontabs

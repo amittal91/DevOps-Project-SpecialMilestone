@@ -1,6 +1,6 @@
 var fs = require('fs')
 var redis = require('redis')
-var input = fs.readFileSync('./redis_server.json');
+var input = fs.readFileSync('/Monitor/redis_server.json');
 
 var redis_ip;
 var redis_port;
