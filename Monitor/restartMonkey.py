@@ -31,4 +31,4 @@ while True:
         failure = execute_js('removeRedisEntry.js',host_ip)
         # os.system(email)
         # os.system(reboot_command)
-    time.sleep(20)
+    time.sleep(5)

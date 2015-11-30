@@ -23,7 +23,9 @@ var host_ip = process.argv[2]
 // var cpu_util = process.argv[3]
 // console.log("IP: " + host_ip)
 
-client.hdel('production', host_ip)
+client.hdel('production', host_ip, function(err, res) {
+    process.exit();
+});
 
 // client.lpop(host_ip, function(err, rep) {
 //     client.lpush(host_ip, cpu_util, function (err1, rep1) {
