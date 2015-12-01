@@ -16,17 +16,14 @@
     - name: "Install forever (to run Node.js app)."
       npm: name=forever global=yes state=latest
 
-    - name: create Proxy
-      file: path=/Proxy state=directory
-
     - name: unzip Proxy and copy to destination
-      unarchive: src='Proxy.zip' dest='/Proxy/' copy='yes'
-
-    - name: Copying files
-      copy: src='redis_server.json' dest='/'
+      unarchive: src='Proxy.zip' dest='/' copy='yes'
 
     - name: npm install
-      npm: path=/Proxy/Proxy/
+      npm: path=/Proxy
 
-    - name: "Start proxy server"
-      command: sudo forever start /Proxy/Proxy/proxyServer.js
+    - name: Start serverDown
+      command: sudo forever start /Proxy/serverDown.js
+
+    - name: Start proxy server
+      command: sudo forever start /Proxy/proxyServer.js

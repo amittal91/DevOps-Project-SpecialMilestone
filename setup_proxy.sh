@@ -1,5 +1,7 @@
 #!/bin/bash
-zip Proxy.zip package.json proxyServer.js
+zip Proxy.zip Proxy/package.json Proxy/proxyServer.js Proxy/redis_server.json Proxy/serverDown.js
+cp Proxy.zip Proxy/
+cd Proxy/
 pwd
 echo "-------------------------------------------------------------------------"
 echo "Installing dependencies..."

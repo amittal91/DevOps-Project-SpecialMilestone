@@ -5,7 +5,7 @@ var fs = require("fs");
 // var input = fs.readFileSync('./proxy_servers.json');
 
 var redis = require('redis')
-var input1 = fs.readFileSync('./redis_server.json');
+var input1 = fs.readFileSync('/Proxy/redis_server.json');
 
 var redis_ip;
 var redis_port;

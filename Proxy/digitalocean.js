@@ -116,7 +116,7 @@ client.listRegions(function(error, response)
 		
 		var d = new Date();
 		var n = d.getTime(); 
-		var name = "amittal-"+n;
+		var name = "ProxyServer"
 		client.createDroplet(name, region, image, function(err, resp, body)
 		{
 			var data = resp.body;
