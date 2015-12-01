@@ -7,6 +7,9 @@
     - name: Installing npm
       apt: pkg=npm state=installed update_cache=true
 
+    - name: Installing unzip
+      apt: pkg=unzip state=installed update_cache=true
+
     - name: "Install forever (to run Node.js app)."
       npm: name=forever global=yes state=latest
 
@@ -15,6 +18,9 @@
 
     - name: Installing python-dev
       apt: pkg=python-dev state=installed update_cache=true
+
+    - name: Installing mailutils
+      apt: pkg=mailutils state=installed update_cache=true
 
     - name: Installing psutil
       command: pip install psutil
@@ -27,3 +33,27 @@
 
     - name: Installing stress
       apt: pkg=stress state=installed update_cache=true
+
+    - name: Copying SMTP server configuration
+      copy: src='main.cf' dest='/etc/postfix'
+
+    - name: Copying app startup script
+      copy: src='startupScripts/monkeyApp.conf' dest='/etc/init'
+
+    - name: Copying monkey startup script
+      copy: src='startupScripts/rc.local' dest='/etc'
+
+    - name: unzip App and copy to destination
+      unarchive: src='App.zip' dest='/' copy='yes'
+
+    - name: unzip Monitor and copy to destination
+      unarchive: src='Monitor.zip' dest='/' copy='yes'
+
+    - name: npm install in App
+      npm: path=/App
+
+    - name: npm install in Monitor
+      npm: path=/Monitor
+
+    - name: Restart server
+      command: sudo reboot now

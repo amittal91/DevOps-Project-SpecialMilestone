@@ -1,3 +1,4 @@
+#!/usr/bin/python
 import psutil
 import math
 import time
