@@ -2,3 +2,6 @@ Prod/digitalocean_config.json
 ProxyServer/digitalocean_config.json
 ProxyServer/node_modules
 ProxyServer/inventory
+node_modules
+inventory
+App/.Rhistory
