@@ -8,7 +8,8 @@ The architecture is as follows:
 ![](https://cloud.githubusercontent.com/assets/9260911/11605617/ba8124dc-9ad2-11e5-9ec6-37354ae3da91.png)
 
 
-We have created five Digital Ocean Droplets that would act as different Production servers. We have created different droplets for Proxy Server and Global Redis Store as well.
+We have created five Digital Ocean Droplets that would act as different Production servers. Our application will be deployed to five servers.
+We have created different droplets for Proxy Server and Global Redis Store as well. The Proxy server will route requests by fetching status of production servers from the global redis store.
 
 ## Tasks
 
