@@ -5,7 +5,8 @@
 For the Special Milestone, we have extended on Milestone 3 and created a Doctor Monkey and a new load balancer. The idea is to be able to do load balancing when a service is available on different production hosts i.e. routing requests to servers based on minimum CPU utilization. Also, we have created a monkey that would detect if a host is currently overloaded and thereby restart the host and all services.
 
 The architecture is as follows:
-<ADD IMAGE>
+![](https://cloud.githubusercontent.com/assets/9260911/11605617/ba8124dc-9ad2-11e5-9ec6-37354ae3da91.png)
+
 
 We have created five Digital Ocean Droplets that would act as different Production servers. We have created different droplets for Proxy Server and Global Redis Store as well.
 
