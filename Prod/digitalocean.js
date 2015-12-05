@@ -116,7 +116,7 @@ client.listRegions(function(error, response)
 		
 		var d = new Date();
 		var n = d.getTime(); 
-		var name = "Production4";
+		var name = "Production5";
 		client.createDroplet(name, region, image, function(err, resp, body)
 		{
 			var data = resp.body;
