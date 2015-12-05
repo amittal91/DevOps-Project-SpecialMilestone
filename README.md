@@ -1,4 +1,5 @@
-#CSC 591/791 - DevOps Special Milestone: Doctor Monkey and Load Balancer
+#CSC 591/791 - DevOps Special Milestone
+#Doctor Monkey and Load Balancer
 
 ## Introduction
 
@@ -27,7 +28,7 @@ The file [prod_configuration.yml](https://github.com/amittal91/DevOps-Project-Sp
 * When the system is down, the proxy does not route request to this server. It automatically routes request to another server which has least utilization at that instant
 * After reboot, all the services are restarted automatically and the host entry and utilization is added back to the redis store so that proxy may choose from available hosts
 * Monitoring scripts are located in the directory named [Monitor](https://github.com/amittal91/DevOps-Project-SpecialMilestone/tree/master/Monitor)
-* Global Redis store entries for five production servers is as shown:
+* Global Redis store entries for five production servers is as shown:<br/>
 ![](https://cloud.githubusercontent.com/assets/9260911/11605673/cde01212-9ad3-11e5-8f63-144275a32393.png)
 
 ### Screencast
